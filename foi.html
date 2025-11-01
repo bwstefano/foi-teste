@@ -3,43 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Página simples</title>
-    <style>
-      html, body {
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
-        margin: 0;
-      }
-
-      /* Centraliza e limita qualquer iframe na página */
-      iframe {
-        display: block;
-        width: 100px;
-        height: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        border: 0;
-      }
-
-      /* Se o script inserir o iframe dentro do container abaixo, garante centralização */
-      [data-foi-feed] {
-        display: flex;
-        justify-content: center;
-      }
-
-      [data-foi-feed] iframe {
-        width: 100px;
-        height: 200px;
-      }
-    </style>
   </head>
   <body>
-    <div
-      data-foi-feed
-      data-url="https://foi.media/feeds/IxmSxwMkXijsop"
-      data-show-author="true"
-      data-show-timestamp="true"
-      data-group-interval="60"
-      data-pagination="scroll"></div>
-
+    <div data-foi-feed data-url="https://foi.media/feeds/IxmSxwMkXijsop" data-show-author="true" data-show-timestamp="true" data-group-interval="60" data-pagination="scroll"></div>
     <script src="https://foi.media/assets/feed.umd.cjs" async></script>
   </body>
 </html>
