@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Página simples</title>
+    <style>
+      html, body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans",
+          "Liberation Sans", sans-serif;
+      }
+
+      /* Caixa que centraliza e limita o tamanho visível */
+      .frame-box {
+        width: 100px;          /* largura máxima desejada */
+        height: 200px;         /* altura máxima desejada */
+        margin: 0 auto;        /* centraliza horizontalmente */
+        overflow: hidden;      /* corta qualquer excesso */
+      }
+
+      /* Garante que o container do feed ocupe o box */
+      .frame-box [data-foi-feed] {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Se o script inserir um iframe, force-o a caber no box */
+      .frame-box iframe {
+        display: block;
+        width: 100% !important;   /* vira 100px por causa do .frame-box */
+        height: 100% !important;  /* vira 200px */
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame-box">
+      <div
+        data-foi-feed
+        data-url="https://foi.media/feeds/IxmSxwMkXijsop"
+        data-show-author="true"
+        data-show-timestamp="true"
+        data-group-interval="60"
+        data-pagination="scroll"></div>
+    </div>
+
+    <script src="https://foi.media/assets/feed.umd.cjs" async></script>
+  </body>
+</html>
